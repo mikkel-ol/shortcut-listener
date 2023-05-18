@@ -1,4 +1,4 @@
-# @mikkel-ol/shortcut-listener
+# @mikkel-ol/shortcut-listener [![npm version](https://badge.fury.io/js/%40mikkel-ol%2Fshortcut-listener.svg)](https://badge.fury.io/js/%40mikkel-ol%2Fshortcut-listener)
 
 > Shortcuts done easy!
 
