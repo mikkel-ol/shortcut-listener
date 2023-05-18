@@ -24,9 +24,9 @@ const enum Shortcut {
 function initializeShortcuts() {
   // global configuration
   configureShortcuts({
-    [Shortcut.SelectAll]: (e) => e.altKey && e.key === "a",
-    [Shortcut.Copy]: (e) => e.altKey && e.key === "c",
-    [Shortcut.Paste]: (e) => e.altKey && e.key === "v",
+    [Shortcut.SelectAll]:   (e) => e.altKey && e.key === "a",
+    [Shortcut.Copy]:        (e) => e.altKey && e.key === "c",
+    [Shortcut.Paste]:       (e) => e.altKey && e.key === "v",
   });
 }
 

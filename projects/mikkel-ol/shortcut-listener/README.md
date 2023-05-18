@@ -1,24 +1,65 @@
-# ShortcutListener
+# @mikkel-ol/shortcut-listener
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+> Shortcuts done easy!
 
-## Code scaffolding
+Listen to shortcuts with decorators in Angular.
 
-Run `ng generate component component-name --project shortcut-listener` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project shortcut-listener`.
-> Note: Don't forget to add `--project shortcut-listener` or else it will be added to the default project in your `angular.json` file. 
+You get complete control over what defines a shortcut. It can be anything from an enum, a string or a number.
 
-## Build
+```
+npm i @mikkel-ol/shortcut-listener
+```
 
-Run `ng build shortcut-listener` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Usage
 
-## Publishing
+Configure the shortcuts by using the `configureShortcuts()` function somewhere in your application. The recommended way is to use the token `APP_INITIALIZER` in your `AppModule`:
 
-After building your library with `ng build shortcut-listener`, go to the dist folder `cd dist/shortcut-listener` and run `npm publish`.
+```ts
+const enum Shortcut {
+  SelectAll,
+  Copy,
+  Paste,
+}
 
-## Running unit tests
+function initializeShortcuts() {
+  // global configuration
+  configureShortcuts({
+    [Shortcut.SelectAll]:   (e) => e.altKey && e.key === "a",
+    [Shortcut.Copy]:        (e) => e.altKey && e.key === "c",
+    [Shortcut.Paste]:       (e) => e.altKey && e.key === "v",
+  });
+}
 
-Run `ng test shortcut-listener` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => initializeShortcuts,
+    },
+  ],
+})
+export class AppModule {}
+```
 
-## Further help
+Then you can listen to shortcuts in your components:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```ts
+export class MyComponent {
+  constructor() {}
+
+  @ShortcutListener(Shortcut.SelectAll)
+  onSelectAll() {
+    // handle select all
+  }
+
+  @ShortcutListener(Shortcut.Copy)
+  onCopy() {
+    // handle copy
+  }
+
+  @ShortcutListener(Shortcut.Paste)
+  onPaste() {
+    // handle paste
+  }
+}
+```

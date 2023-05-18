@@ -1,6 +1,7 @@
 {
   "name": "@mikkel-ol/shortcut-listener",
-  "version": "1.0.0",
+  "version": "1.0.4",
+  "description": "Shortcuts with @Decorators()",
   "peerDependencies": {
     "@angular/common": "^16.0.0",
     "@angular/core": "^16.0.0"
