@@ -1,7 +1,7 @@
 import { Observable, pipe, UnaryFunction } from "rxjs";
 import { filter } from "rxjs/operators";
+import { config } from "../shortcut.config";
 import { RecordKey } from "./record-key";
-import { config } from "./shortcut.config";
 
 export function filterShortcut(
   shortcut: RecordKey

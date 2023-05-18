@@ -1,5 +1,5 @@
-import { RecordKey } from "./record-key";
 import { Shortcuts } from "./shortcuts.type";
+import { RecordKey } from "./utils/record-key";
 
 export type Config = {
   shortcuts: Shortcuts<RecordKey>;

@@ -1,7 +1,7 @@
 import { Subscription, debounceTime, fromEvent, merge, tap } from "rxjs";
-import { filterShortcut } from "./filter-shortcut.operator";
-import { RecordKey } from "./record-key";
-import { stopEvent } from "./stop-event.operator";
+import { filterShortcut } from "./utils/filter-shortcut.operator";
+import { RecordKey } from "./utils/record-key";
+import { stopEvent } from "./utils/stop-event.operator";
 
 const eventTypes$ = [
   fromEvent<KeyboardEvent>(window, "keypress"),
