@@ -1,6 +1,7 @@
 {
   "name": "shortcut-listener",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Shortcuts with @Decorators()",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
