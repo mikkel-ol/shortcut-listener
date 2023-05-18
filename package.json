@@ -10,6 +10,15 @@
     "test": "ng test"
   },
   "private": false,
+  "keywords": [
+    "shortcut",
+    "shortcuts",
+    "hotkey",
+    "hotkeys",
+    "angular",
+    "decorator",
+    "decorators"
+  ],
   "dependencies": {
     "@angular/animations": "^16.0.0",
     "@angular/common": "^16.0.0",

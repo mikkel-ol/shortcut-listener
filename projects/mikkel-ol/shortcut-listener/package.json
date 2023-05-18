@@ -1,7 +1,16 @@
 {
   "name": "@mikkel-ol/shortcut-listener",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Shortcuts with @Decorators()",
+  "keywords": [
+    "shortcut",
+    "shortcuts",
+    "hotkey",
+    "hotkeys",
+    "angular",
+    "decorator",
+    "decorators"
+  ],
   "peerDependencies": {
     "@angular/common": "^16.0.0",
     "@angular/core": "^16.0.0"
