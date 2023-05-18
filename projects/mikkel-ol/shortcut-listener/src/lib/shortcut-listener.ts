@@ -4,8 +4,8 @@ import { RecordKey } from "./utils/record-key";
 import { stopEvent } from "./utils/stop-event.operator";
 
 const eventTypes$ = [
-  fromEvent<KeyboardEvent>(window, "keypress"),
-  fromEvent<KeyboardEvent>(window, "keydown"),
+  fromEvent<KeyboardEvent>(document, "keypress"),
+  fromEvent<KeyboardEvent>(document, "keydown"),
 ];
 
 export type Options = {
