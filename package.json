@@ -2,6 +2,7 @@
   "name": "shortcut-listener",
   "version": "1.0.0",
   "description": "Shortcuts with @Decorators()",
+  "repository": "https://github.com/mikkel-ol/shortcut-listener",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

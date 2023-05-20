@@ -1,7 +1,8 @@
 {
   "name": "@mikkel-ol/shortcut-listener",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Shortcuts with @Decorators()",
+  "repository": "https://github.com/mikkel-ol/shortcut-listener",
   "keywords": [
     "shortcut",
     "shortcuts",
