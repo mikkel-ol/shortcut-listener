@@ -14,9 +14,7 @@ const enum Shortcut {
 })
 class AppComponent {
   @ShortcutListener(Shortcut.Copy)
-  onCopy() {
-    console.log("onCopy");
-  }
+  onCopy() {}
 }
 
 describe("ShortcutListener", () => {

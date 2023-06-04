@@ -24,7 +24,7 @@ export function ShortcutListener(shortcut: RecordKey, opts: Options = {}) {
     ...opts,
   } satisfies Options;
 
-  return (target: Object, propertyKey: string, descriptor: PropertyDescriptor) => {
+  return (target: Object, _propertyKey: string, descriptor: PropertyDescriptor) => {
     let subscription: Subscription;
 
     const originalMethod = descriptor.value as Function | null;
